@@ -49,22 +49,6 @@ export const initLanguageSwitch = () => {
     setInactive(elD, elHref);
     setInactive(elM, elHref);
   }
-
-  // ---- Προαιρετικό: γεωεντοπισμός 1x ανά session
-  const KEY = "langRedirected";
-  if (!sessionStorage.getItem(KEY)) {
-    fetch("https://ipapi.co/json/")
-      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-      .then((data) => {
-        const isGR = data && data.country === "GR";
-        if (isGR && lang !== "el") window.location.assign(elHref);
-        else if (!isGR && lang !== "en") window.location.assign(enHref);
-      })
-      .catch((err) =>
-        console.warn("[languageSwitch] location detect failed:", err)
-      )
-      .finally(() => sessionStorage.setItem(KEY, "true"));
-  }
 };
 
 // Προαιρετικά κάν’ το και default για εύκολο import
