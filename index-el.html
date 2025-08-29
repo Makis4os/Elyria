@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/Elyria_icon.png" />
+    <title>Elyria - Apartment</title>
+    <link rel="stylesheet" href="./styles/global-el.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <script src="./src/main.js" type="module"></script>
+    <script src="./src/utils/reviews-slider.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/utils/galleryLayoput.js"></script>
+  </head>
+  <body class="bg-white opacity-0">
+    <!-- Navbar -->
+    <nav class="bg-white sticky top-0 z-50 h-24 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#">
+              <img
+                loading="lazy"
+                src="./img/Elyria_Logo_Blue.png"
+                alt="Logo"
+                class="h-[72px]"
+              />
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-[#1F628E] font-medium transition"
+              >Αρχική</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-[#1F628E] font-medium transition"
+              >Υπηρεσίες</a
+            >
+            <a
+              href="#gallery"
+              class="text-gray-700 hover:text-[#1F628E] font-medium transition"
+              >Συλλογή</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-[#1F628E] font-medium transition"
+              >Ποιοι είμαστε</a
+            >
+
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-[#1F628E] font-medium transition"
+              >Επικοινωνία</a
+            >
+
+            <!-- Vertical Line -->
+            <div class="w-px h-6 bg-gray-300"></div>
+
+            <!-- Language Switch (Desktop) -->
+            <div class="flex items-center space-x-2 language-switch">
+              <a
+                id="lang-en"
+                href="index.html"
+                class="inactive"
+                aria-label="Switch to English"
+                >En</a
+              >
+              <span class="text-gray-400 select-none">/</span>
+              <a
+                id="lang-gr"
+                href="index-el.html"
+                class="inactive"
+                aria-label="Switch to Greek"
+                >Gr</a
+              >
+            </div>
+          </div>
+          <!-- Mobile Hamburger Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="menu-btn"
+              class="hamburger focus:outline-none"
+              aria-label="Menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden bg-white px-4">
+        <div class="pt-2 pb-4 space-y-3">
+          <a
+            href="#"
+            class="block py-2 text-gray-700 hover:text-[#1F628E] transition"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="block py-2 text-gray-700 hover:text-[#1F628E] transition"
+            >Services</a
+          >
+          <a
+            href="#gallery"
+            class="block py-2 text-gray-700 hover:text-[#1F628E] transition"
+            >Gallery</a
+          >
+          <a
+            href="#about"
+            class="block py-2 text-gray-700 hover:text-[#1F628E] transition"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 text-gray-700 hover:text-[#1F628E] transition"
+            >Contact</a
+          >
+
+          <div class="border-t border-gray-200 my-2"></div>
+
+          <!-- Mobile Language Switch -->
+          <div
+            class="flex items-center space-x-2 font-medium py-2 language-switch"
+          >
+            <a
+              id="lang-en-mobile"
+              href="index.html"
+              class="inactive"
+              aria-label="Switch to English"
+              >En</a
+            >
+            <span class="text-gray-400 select-none">/</span>
+            <a
+              id="lang-gr-mobile"
+              href="index-el.html"
+              class="inactive"
+              aria-label="Switch to Greek"
+              >Gr</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- First Section -->
+    <section
+      class="relative h-[750px] bg-cover bg-center rounded-lg overflow-hidden mx-auto max-w-7xl mt-4 md:mt-8 mb-16 md:mb-32 scroll-mt-[120px]"
+      style="background-image: url('./img/section1/section1.jpg')"
+    >
+      <div
+        class="flex flex-col items-center justify-center h-full text-center px-4"
+      >
+        <h2 class="text-white text-4xl md:text-5xl font-bold mb-4">
+          Καλώς ήρθατε στο Elyria διαμέρισμα
+        </h2>
+        <p class="text-white text-lg md:text-xl mb-6">
+          Ανακαλύψτε το κατάλυμα των ονείρων σας στο Πόρτο Χέλι
+        </p>
+      </div>
+    </section>
+
+    <!-- Second Section -->
+    <section
+      id="services"
+      class="max-w-7xl mx-auto px-4 my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center scroll-mt-[120px]"
+    >
+      <!-- Left Content -->
+      <div>
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#1F628E]"
+        >
+          Το διαμέρισμα Elyria περιέχει:
+          <br />
+          <br />
+        </h2>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-2 gap-6 mb-6">
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/angle.svg"
+              alt="Beds"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Συνολική επιφάνεια</p>
+              <p class="font-bold text-xl text-[#1F628E]">124 τ.μ.</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/bed.svg"
+              alt="Baths"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Υπνοδωμάτια / Κρεβάτια</p>
+              <p class="font-bold text-xl text-[#1F628E]">3 / 4</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/bath-tub.svg"
+              alt="Garages"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Μπάνια</p>
+              <p class="font-bold text-xl text-[#1F628E]">2</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/kitchen.svg"
+              alt="Kitchens"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Κουζίνα</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/living_room.svg"
+              alt="Total Area"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Καθιστικό</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/dining.svg"
+              alt="Total Area"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Τραπεζαρία</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/working.svg"
+              alt="Total Area"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Χώρο Εργασίας</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img
+              loading="lazy"
+              src="./img/section2/icons/veranda.png"
+              alt="Total Area"
+              class="w-10 h-10"
+            />
+            <div>
+              <p class="text-sm text-gray-500">Βεράντα</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div>
+        <img
+          loading="lazy"
+          src="./img/section2/section2.jpg"
+          alt="Property Image"
+          class="rounded-lg shadow-md w-full object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- Third Section -->
+    <section id="gallery" class="bg-white my-16 md:my-32 scroll-mt-[120px]">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-[#1F628E]"
+        >
+          Δείτε τη συλλογή του Elyria
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <!-- Left Filter Box -->
+          <div
+            class="bg-[#1F628E] p-8 flex flex-col justify-center rounded-lg min-h-[320px] md:min-h-0"
+          >
+            <div class="flex flex-col space-y-6 mb-8">
+              <button
+                data-filter="livingroom"
+                class="filter-btn text-white font-semibold hover:underline active-filter"
+              >
+                Καθιστικό
+              </button>
+              <button
+                data-filter="kitchen"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Κουζίνα
+              </button>
+              <button
+                data-filter="diningroom"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Τραπεζαρία
+              </button>
+              <button
+                data-filter="bathroom1&bathroom1"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Υπ/δ 1 + Μπάνιο 1
+              </button>
+              <button
+                data-filter="bedroom2"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Υπ/δ 2
+              </button>
+              <button
+                data-filter="bedroom3"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Υπ/δ 3
+              </button>
+              <button
+                data-filter="bathroom2"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Μπάνιο 2
+              </button>
+              <button
+                data-filter="workingspace"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Χώρος Εργασίας
+              </button>
+              <button
+                data-filter="veranda"
+                class="filter-btn text-white font-semibold hover:underline"
+              >
+                Βεράντα
+              </button>
+            </div>
+            <p class="text-white text-xs text-center mt-auto">
+              Κάντε κλικ σε οποιαδήποτε κατηγορία για να φιλτράρετε αμέσως τις
+              εικόνες.
+            </p>
+          </div>
+
+          <!-- Gallery -->
+          <div
+            id="galleryGrid"
+            class="md:col-span-2 grid grid-cols-2 gap-4 min-h-[320px] md:min-h-0"
+          >
+            <!-- Images with categories -->
+            <img
+              loading="lazy"
+              src="img/section3/1_Livingroom/LivingRoom1.jpg"
+              data-category="livingroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Livingroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/1_Livingroom/LivingRoom2.jpg"
+              data-category="livingroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Livingroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen1.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen2.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen3.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen4.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen5.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/2_Kitchen/Kitchen6.jpg"
+              data-category="kitchen"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Kitchen"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/3_Dining_Room/Diningroom1.jpg"
+              data-category="diningroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Diningroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/3_Dining_Room/Diningroom2.jpg"
+              data-category="diningroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Diningroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/3_Dining_Room/Diningroom3.jpg"
+              data-category="diningroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Diningroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/3_Dining_Room/Diningroom4.jpg"
+              data-category="diningroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Diningroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/3_Dining_Room/Diningroom1.jpg"
+              data-category="diningroom"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Diningroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/4_Bedroom1_Bathroom1/BedroomBathroom1.jpg"
+              data-category="bathroom1&bathroom1"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom & Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/4_Bedroom1_Bathroom1/BedroomBathroom2.jpg"
+              data-category="bathroom1&bathroom1"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom & Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/4_Bedroom1_Bathroom1/BedroomBathroom3.jpg"
+              data-category="bathroom1&bathroom1"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom & Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/4_Bedroom1_Bathroom1/BedroomBathroom4.jpg"
+              data-category="bathroom1&bathroom1"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom & Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/4_Bedroom1_Bathroom1/BedroomBathroom5.jpg"
+              data-category="bathroom1&bathroom1"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom & Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/5_Bedroom2/Bedroom1.jpg"
+              data-category="bedroom2"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/5_Bedroom2/Bedroom2.jpg"
+              data-category="bedroom2"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/6_Bedroom3/Bedroom1.jpg"
+              data-category="bedroom3"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/6_Bedroom3/Bedroom2.jpg"
+              data-category="bedroom3"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/6_Bedroom3/Bedroom3.jpg"
+              data-category="bedroom3"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bedroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/7_Bathroom2/Bathroom1.jpg"
+              data-category="bathroom2"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/7_Bathroom2/Bathroom2.jpg"
+              data-category="bathroom2"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/7_Bathroom2/Bathroom3.jpg"
+              data-category="bathroom2"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Bathroom"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/8_Working_Space/WorkingSpace.jpg"
+              data-category="workingspace"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Working Space"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/9_Veranda/Veranda1.jpg"
+              data-category="veranda"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Veranda"
+            />
+            <img
+              loading="lazy"
+              src="img/section3/9_Veranda/Veranda2.jpg"
+              data-category="veranda"
+              class="gallery-img rounded-lg object-cover w-full h-auto"
+              alt="Veranda"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section -->
+    <section id="about" class="bg-white my-16 md:my-32 scroll-mt-[120px]">
+      <div
+        class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Left Image -->
+        <div class="h-full">
+          <img
+            loading="lazy"
+            src="./img/section4/section4.jpg"
+            alt="Dining Experience"
+            class="rounded-lg shadow-lg object-cover w-full h-full"
+          />
+        </div>
+
+        <!-- Right Text -->
+        <div>
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F628E] mb-4"
+          >
+            Η εμπειρία στο διαμέρισμα Elyria
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Στο Elyria δεν νοικιάζεις απλώς ένα διαμέρισμα - έρχεσαι να νιώσεις
+            σαν το σπίτι σου, σε έναν χώρο που φτιάχτηκε με αγάπη για να
+            προσφέρει ξεκούραση και ζεστασιά.<br /><span
+              class="block h-2"
+            ></span>
+            Βρίσκεται μόλις 10 λεπτά με τα πόδια από το κέντρο του Πόρτο Χελίου,
+            σε μια ήσυχη γειτονιά που σου επιτρέπει να απολαύσεις την ηρεμία
+            χωρίς να απομακρυνθείς από τη ζωή του τόπου. Το Elyria είναι
+            φωτεινό, ευρύχωρο και ιδανικό για οικογένειες ή φίλους που θέλουν να
+            μοιραστούν όμορφες στιγμές.<br /><span class="block h-2"></span>
+            Διαθέτει τρία υπνοδωμάτια - το ένα με δικό του μπάνιο για λίγη
+            παραπάνω ιδιωτικότητα, και άλλα δύο που μοιράζονται ένα ακόμα
+            μπάνιο. Η κουζίνα είναι πλήρως εξοπλισμένη, ιδανική για σπιτικά
+            πρωινά ή βραδινές μαγειρικές εμπνεύσεις. Η αυλη του είναι μεγάλη και
+            άνετη - ένας χώρος που θα γίνει το αγαπημένο σας σημείο για καφέ,
+            κουβέντες και χαλάρωση.<br /><span class="block h-2"></span>Το
+            διαμέρισμα φιλοξενεί άνετα μέχρι 6 άτομα, έχει wifi, κλιματισμό,
+            χώρο για να δουλέψετε αν το χρειάζεστε - και όλα εκείνα τα μικρά
+            στοιχεία που κάνουν μια διαμονή να νιώθει σαν «σπίτι»<br /><span
+              class="block h-2"
+            ></span
+            >Στο Elyria, στόχος μας είναι να σας προσφέρουμε κάτι παραπάνω από
+            έναν τόπο διαμονής. Θέλουμε να γίνουμε μέρος των αναμνήσεων σας.<br /><span
+              class="block h-2"
+            ></span>
+            Σας περιμένομε!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.1 Section -->
+    <section id="reviews" class="bg-white my-16 md:my-32 scroll-mt-[120px]">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1F628E] mb-10">
+          Αξιολογήσεις επισκεπτών
+        </h2>
+
+        <!-- Slider Wrapper -->
+        <div class="relative">
+          <!-- viewport -->
+          <div class="overflow-hidden">
+            <div id="slider" class="flex transition-transform duration-500">
+              <!-- Slide 1 -->
+              <div
+                class="min-w-full px-4 md:px-6 min-h-[220px] flex flex-col justify-center"
+              >
+                <p class="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                  «Υπέροχος, πεντακάθαρος και ξεχωριστός χώρος, που μας άφησε
+                  ξεχωριστές αναμνήσεις!!!»
+                </p>
+                <p class="mt-3 md:mt-4 font-semibold text-[#1F628E]">
+                  — Γιώργος, Χρήστος, Παύλος, Ματούλα, Παναγιώτα
+                </p>
+              </div>
+              <!-- Slide 2 -->
+              <div
+                class="min-w-full px-4 md:px-6 min-h-[220px] flex flex-col justify-center"
+              >
+                <p class="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                  «Λίγο η ομορφιά του σπιτιού, λίγο το πανέμορφο ηλιοβασίλεμα
+                  από την αυλή, λίγο από αυτές οι πανέμορφες παραλίες στο Πόρτο
+                  Χέλι, αλλά είναι και μερικοί οικοδεσπότες που κάνουν αυτά τα
+                  τριήμερα εξόρμησης, ξεχωριστά!»
+                </p>
+                <p class="mt-3 md:mt-4 font-semibold text-[#1F628E]"></p>
+              </div>
+              <!-- Slide 3 -->
+              <div
+                class="min-w-full px-4 md:px-6 min-h-[220px] flex flex-col justify-center"
+              >
+                <p class="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                  «Περάσαμε υπέροχα στο όμορφο διαμέρισμά σας! Το σπίτι ήταν
+                  πολύ ευρύχωρο και η οικοδεσπότης ήταν τόσο ευγενική που μας
+                  άφησε μερικά γλυκά στο ψυγείο. Συνολικά, μια καταπληκτική
+                  εμπειρία!»
+                </p>
+                <p class="mt-3 md:mt-4 font-semibold text-[#1F628E]">
+                  — George, Tilda, Mounir, Hanny
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            id="prev"
+            class="absolute left-2 md:-left-8 top-1/2 -translate-y-1/2 text-[#1F628E] text-3xl md:text-4xl font-bold px-2 md:px-3 py-1 md:py-2 hover:scale-110 transition"
+          >
+            ‹
+          </button>
+          <button
+            id="next"
+            class="absolute right-2 md:-right-8 top-1/2 -translate-y-1/2 text-[#1F628E] text-3xl md:text-4xl font-bold px-2 md:px-3 py-1 md:py-2 hover:scale-110 transition"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fifth Section -->
+    <section class="bg-white my-16 md:my-32 scroll-mt-[120px]" id="contact">
+      <div
+        class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
+      >
+        <!-- Left Content -->
+        <div>
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F628E] mb-6"
+          >
+            Επικοινωνήστε μαζί μας
+          </h2>
+
+          <div class="grid grid-cols-1 gap-6">
+            <!-- Location -->
+            <div class="flex items-center space-x-4">
+              <svg
+                class="w-8 h-8 text-[#1F628E]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-800">Τοποθεσία</p>
+                <a
+                  href="https://www.google.com/maps/place/Porto+Heli,+Greece"
+                  target="_blank"
+                  class="text-sm text-gray-600"
+                >
+                  Πόρτο Χέλι, Ερμιονίδα
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center space-x-4">
+              <svg
+                class="w-8 h-8 text-[#1F628E]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1v3.75a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.75a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1l-2.46 2.21z"
+                />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-800">Τηλέφωνο</p>
+                <p class="text-sm text-gray-600">
+                  <a href="tel:+30 6978035272">+30 6978035272 (Γεωργία)</a>
+                </p>
+                <p class="text-sm text-gray-600">
+                  <a href="tel:+30 6979333976">+30 6979333976 (Δέσποινα)</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center space-x-4">
+              <svg
+                class="w-8 h-8 text-[#1F628E]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l8 7 8-7V18H4z"
+                />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-800">Email</p>
+                <p class="text-sm text-gray-600">
+                  <a href="mailto:info@yourhotel.com" class="hover:underline"
+                    >georgiamach@yahoo.gr</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-600 mb-4 md:mb-6 leading-relaxed">
+            <br />
+            Κάθε στιγμή του ταξιδιού σας είναι σημαντική για εμάς. Μοιραστείτε
+            τα σχόλιά σας ή επικοινωνήστε απευθείας μαζί μας!
+          </p>
+          <p class="text-gray-600 mb-4 md:mb-6 leading-relaxed">
+            Εκτιμούμε τη γνώμη σας και χαιρόμαστε να έρθουμε σε επαφή μαζί σας!
+          </p>
+        </div>
+
+        <!-- Right Content: Elyria Rules -->
+        <div
+          class="hidden md:col-span-1 md:block bg-[#1F628E] text-white p-6 rounded-lg shadow-lg h-full flex flex-col"
+        >
+          <h3 class="text-2xl font-bold mb-6 text-center">Κανόνες Elyria</h3>
+
+          <!-- Grid με κενό ανάμεσα στις 2 στήλες -->
+          <div class="grid grid-cols-2 flex-grow gap-x-6">
+            <!-- Rule Item -->
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-smoking.png"
+                alt="No Smoking"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΑΠΑΓΟΡΕΥΕΤΑΙ ΤΟ ΚΑΠΝΙΣΜΑ/ΑΤΜΙΣΜΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-pets.png"
+                alt="No Pets"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΑΠΑΓΟΡΕΥΟΝΤΑΙ ΤΑ ΚΑΤΟΙΚΙΔΙΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-toilet.png"
+                alt="No Toilet"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΜΗΝ ΠΕΤΑΤΕ ΧΑΡΤΙΑ ΣΤΗΝ ΤΟΥΑΛΕΤΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/disable.png"
+                alt="Switch Off"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΑΠΕΝΕΡΓΟ-ΠΟΙΗΣΤΕ ΤΙΣ ΣΥΣΚΕΥΕΣ Ο-ΤΑΝ ΔΕΝ ΤΙΣ
+                ΧΡΕΙΑΖΕΣΤΕ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/clean.png"
+                alt="Clean"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΚΡΑΤΗΣΤΕ ΤΟ ΔΙΑΜΕΡΙΣΜΑ ΤΑΚΤΟ-ΠΟΙΗΜΕΝΟ ΚΑΙ
+                ΚΑΘΑΡΟ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-sound.png"
+                alt="No Noise"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΜΗΝ ΚΑΝΕΤΕ ΦΑΣΑΡΙΑ, ΣΕΒΑ-ΣΤΕΙΤΕ ΤΟΥΣ ΓΕΙΤΟΝΕΣ</span
+              >
+            </div>
+
+            <!-- Τελευταία σειρά χωρίς border-b -->
+            <div class="flex items-center p-3">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/heart.png"
+                alt="Return Items"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΕΠΙΣΤΡΕ-ΨΤΕ ΤΑ ΑΝΤΙΚΕΙΜΕΝΑ ΣΤΗΝ ΘΕΣΗ ΤΟΥΣ ΜΕΤΑ ΤΗΝ
+                ΧΡΗ-ΣΗ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/money.png"
+                alt="Damage"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΟΠΟΙΑΔΗΠΟΤΕ ΚΑΤΑΣΤΡΟ-ΦΗ ΣΤΟ ΔΙΑΜΕΡΙΣΜΑ ΘΑ ΧΡΕΩΘΕΙ</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- For mobile -->
+        <div
+          class="block lg:hidden bg-[#1F628E] text-white p-6 rounded-lg shadow-lg h-full flex flex-col"
+        >
+          <h3 class="text-2xl font-bold mb-6 text-center">Κανόνες Elyria</h3>
+
+          <!-- Grid με κενό ανάμεσα στις 2 στήλες -->
+          <div class="grid grid-cols-1 flex-grow gap-x-6">
+            <!-- Rule Item -->
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-smoking.png"
+                alt="No Smoking"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΑΠΑΓΟΡΕΥΕΤΑΙ ΤΟ ΚΑΠΝΙΣΜΑ/ΑΤΜΙΣΜΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-pets.png"
+                alt="No Pets"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΑΠΑΓΟΡΕΥΟΝΤΑΙ ΤΑ ΚΑΤΟΙΚΙΔΙΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-toilet.png"
+                alt="No Toilet"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΜΗΝ ΠΕΤΑΤΕ ΧΑΡΤΙΑ ΣΤΗΝ ΤΟΥΑΛΕΤΑ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/disable.png"
+                alt="Switch Off"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΑΠΕΝΕΡΓΟΠΟΙΗΣΤΕ ΤΙΣ ΣΥΣΚΕΥΕΣ ΟΤΑΝ ΔΕΝ ΤΙΣ
+                ΧΡΕΙΑΖΕΣΤΕ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/clean.png"
+                alt="Clean"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΚΡΑΤΗΣΤΕ ΤΟ ΔΙΑΜΕΡΙΣΜΑ ΤΑΚΤΟΠΟΙΗΜΕΝΟ ΚΑΙ
+                ΚΑΘΑΡΟ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/no-sound.png"
+                alt="No Noise"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΜΗΝ ΚΑΝΕΤΕ ΦΑΣΑΡΙΑ, ΣΕΒΑΣΤΕΙΤΕ ΤΟΥΣ ΓΕΙΤΟΝΕΣ</span
+              >
+            </div>
+
+            <!-- Τελευταία σειρά χωρίς border-b -->
+            <div class="flex items-center p-3 border-b border-white">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/heart.png"
+                alt="Return Items"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΠΑΡΑΚΑΛΟΥΜΕ ΕΠΙΣΤΡΕ-ΨΤΕ ΤΑ ΑΝΤΙΚΕΙΜΕΝΑ ΣΤΗΝ ΘΕΣΗ ΤΟΥΣ ΜΕΤΑ ΤΗΝ
+                ΧΡΗΣΗ</span
+              >
+            </div>
+
+            <div class="flex items-center p-3">
+              <img
+                loading="lazy"
+                src="./img/section5/icons/money.png"
+                alt="Damage"
+                class="w-10 h-10 mr-3"
+              />
+              <span class="font-semibold text-sm"
+                >ΟΠΟΙΑΔΗΠΟΤΕ ΚΑΤΑΣΤΡΟΦΗ ΣΤΟ ΔΙΑΜΕΡΙΣΜΑ ΘΑ ΧΡΕΩΘΕΙ</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F628E] text-white py-10">
+      <div
+        class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Column 1 -->
+        <div class="flex justify-center md:justify-start">
+          <div class="p-2">
+            <a href="#">
+              <img
+                loading="lazy"
+                src="./img/Elyria_Logo_White.png"
+                alt="Logo"
+                class="h-12 mb-4 mx-auto md:mx-0"
+              />
+            </a>
+            <p class="text-sm leading-relaxed">
+              Ανακαλύψτε το Elyria, μια μοντέρνα κατοικία σχεδιασμένη για άνεση
+              και κομψότητα.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flex justify-center">
+          <div class="flex flex-col space-y-2 p-2">
+            <h4 class="font-semibold text-lg mb-2">Πλοήγηση</h4>
+            <a href="#" class="hover:underline">Αρχική</a>
+            <a href="#services" class="hover:underline">Υπηρεσίες</a>
+            <a href="#gallery" class="hover:underline">Συλλογή</a>
+            <a href="#about" class="hover:underline">Ποιοι είμαστε</a>
+            <a href="#contact" class="hover:underline">Επικοινωνία</a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex justify-center md:justify-end">
+          <div class="flex flex-col space-y-2 p-2">
+            <h4 class="font-semibold text-lg mb-2">Επικοινωνία</h4>
+            <p class="text-sm">
+              <a
+                href="https://www.google.com/maps/place/Porto+Heli,+Greece"
+                target="_blank"
+              >
+                Πόρτο Χέλι, Ερμιονίδα
+              </a>
+            </p>
+            <p class="text-sm">
+              <a href="tel:+30 6978035272">+30 6978035272 (Γεωργία)</a>
+            </p>
+            <p class="text-sm">
+              <a href="tel:+30 6979333976">+30 6979333976 (Δέσποινα)</a>
+            </p>
+            <p class="text-sm">
+              <a href="mailto:georgiamach@yahoo.gr">georgiamach@yahoo.gr</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/20 mt-8 pt-4 text-center text-sm text-white/80"
+      >
+        &copy; <span id="year"></span> Elyria. All rights reserved.
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("animate-fadeIn");
+      });
+    </script>
+  </body>
+</html>
