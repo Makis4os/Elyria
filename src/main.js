@@ -1,11 +1,10 @@
-// import "./index.css";
-// import "../styles/global.css";
-// import "../styles/header.css";
-import { initMobileNav, initGalleryFilter } from "./utils/mobileNav.js";
-import { initLanguageSwitch } from "./utils/languageSwitch.js";
+import { initMobileNav } from "./utils/mobileNav.js";
+import initLanguageSwitch from "./utils/languageSwitch.js";
+
+import "./utils/reviews-slider.js";
+import "./utils/galleryLayout.js";
 
 initMobileNav();
-initGalleryFilter();
 initLanguageSwitch();
 
 console.log("Welcome to Elyria console!");
