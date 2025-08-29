@@ -5,8 +5,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index-el.html",
-        el: "index.html",
+        main: "index.html",
+        el: "index-el.html",
       },
     },
   },
