@@ -1,10 +1,13 @@
+// src/utils/galleryLayout.js
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".filter-btn");
   const images = document.querySelectorAll(".gallery-img");
   const galleryGrid = document.getElementById("galleryGrid");
+  if (!buttons.length || !images.length || !galleryGrid) return;
 
   let sliderTimer = null;
   const SLIDE_MS = 3000; // 3s
+  const isMobile = () => window.matchMedia("(max-width: 767px)").matches;
 
   const clearSlider = () => {
     if (sliderTimer) {
@@ -17,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     galleryGrid.onmouseleave = null;
   };
 
-  // ✅ κρατάμε min-h στο mobile, h-full μόνο από md και πάνω
+  // κρατάμε min-h στο mobile, h-full μόνο από md και πάνω
   const stackAsFullscreen = () => {
     galleryGrid.className =
       "md:col-span-2 relative overflow-hidden rounded-lg min-h-[320px] md:min-h-0 md:h-full";
@@ -114,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // -------- Εφαρμογή φίλτρου --------
-  const applyFilter = (filter) => {
+  const applyFilter = (filter, { skipScroll = false } = {}) => {
     buttons.forEach((b) => {
       b.classList.toggle(
         "active-filter",
@@ -134,22 +137,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (visible.length === 1) {
       toSingle(visible[0]);
+      if (!skipScroll && isMobile()) {
+        // scroll στο πρώτο ορατό image
+        const y = visible[0].getBoundingClientRect().top + window.scrollY - 180;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     } else if (visible.length > 1) {
       toSlider(visible);
+      if (!skipScroll && isMobile()) {
+        const y = visible[0].getBoundingClientRect().top + window.scrollY - 180;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
   };
 
   // Clicks
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      applyFilter(button.getAttribute("data-filter"));
+      applyFilter(button.getAttribute("data-filter"), { skipScroll: false });
     });
   });
 
-  // Apply στο load (π.χ. livingroom)
+  // Apply στο load (π.χ. livingroom) χωρίς scroll
   const activeBtn = document.querySelector(".filter-btn.active-filter");
   const defaultFilter = activeBtn
     ? activeBtn.getAttribute("data-filter")
     : "livingroom";
-  applyFilter(defaultFilter);
+  applyFilter(defaultFilter, { skipScroll: true });
 });
